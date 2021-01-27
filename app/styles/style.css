@@ -1,0 +1,110 @@
+html {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+body {
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.no-border {
+  border: none;
+}
+
+.grey-med {
+  color: #a3a5ae;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body header {
+  margin: 90px 40px 50px 40px;
+}
+
+body header h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+body header h2 {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+body header span {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+body > div {
+  margin: 25px 32px 25px 32px;
+  background-color: white;
+  border-radius: 5px;
+  border-top: 5px solid white;
+  height: 220px;
+}
+
+body > div > div {
+  border-radius: 5px;
+  border-top: 5px solid white;
+  height: 220px;
+}
+
+body > div > div:first-child {
+  margin-bottom: 50px;
+}
+
+body > div h3 {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: #4c4e61;
+}
+
+.shadow {
+  -webkit-box-shadow: 5px 10px 10px -10px #a3a5ae, -5px 10px 20px -10px #a3a5ae;
+          box-shadow: 5px 10px 10px -10px #a3a5ae, -5px 10px 20px -10px #a3a5ae;
+}
+
+.border-cyan {
+  border-color: #45d3d3;
+}
+
+.border-red {
+  border-color: #ea5353;
+}
+
+.border-orange {
+  border-color: #fcaf4a;
+}
+
+.border-blue {
+  border-color: #549ef2;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+body {
+    & > div {
+        margin: 25px 32px 25px 32px;
+        background-color: white;
+        border-radius: 5px;
+        border-top: 5px solid white;
+        height: 220px;
+
+        & > div {
+            border-radius: 5px;
+            border-top: 5px solid white;
+            height: 220px;
+
+            &:first-child{
+                margin-bottom: 50px;
+            }
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-left: 20px;
+            color: $veryDarkBlue;
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 5px 10px 10px -10px $grayishBlue, -5px 10px 20px -10px $grayishBlue;
+}
+
+.border-cyan {
+    border-color: $cyan;
+}
+
+.border-red {
+    border-color: $red;
+}
+
+.border-orange {
+    border-color: $orange;
+}
+
+.border-blue {
+    border-color: $blue;
+}
