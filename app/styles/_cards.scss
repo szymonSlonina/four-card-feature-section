@@ -5,21 +5,27 @@ body {
         border-radius: 5px;
         border-top: 5px solid white;
         height: 220px;
+        width: 310px;
 
-        & > div {
-            border-radius: 5px;
-            border-top: 5px solid white;
-            height: 220px;
+        position: relative;
 
-            &:first-child{
-                margin-bottom: 50px;
-            }
-        }
-
-        h3 {
+        & > h3 {
             margin-top: 30px;
             margin-left: 20px;
             color: $veryDarkBlue;
+        }
+
+        & > span {
+            margin-left: 20px;
+            color: $grayishBlue;
+            display: block;
+            font-size: .8rem;
+        }
+
+        & > img {
+            position:absolute;
+            right: 10%;
+            bottom: 10%;
         }
     }
 }
@@ -42,4 +48,26 @@ body {
 
 .border-blue {
     border-color: $blue;
+}
+
+#supervisor {
+    grid-area: supervisor;
+    @media screen and (min-width: $startOversize) {
+        justify-self: end;
+    }
+}
+
+#team-builder {
+    grid-area: team-builder;
+}
+
+#karma { 
+    grid-area: karma;
+}
+
+#calculator {
+    grid-area: calculator;
+    @media screen and (min-width: $startOversize) {
+        justify-self: start;
+    }
 }

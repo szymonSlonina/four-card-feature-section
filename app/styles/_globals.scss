@@ -6,7 +6,7 @@ html {
 body {
     font-size: 15px;
     box-sizing: border-box;
-    margin: 0px;
+    margin: 90px 0px 0px 0px;
     padding: 0px;
     overflow-x: hidden;
 
@@ -14,6 +14,20 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    @media screen and (min-width: $startMobile) {
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 50px;
+        grid-template-areas: "heading heading heading"
+        "supervisor team-builder calculator"
+        "supervisor karma calculator"
+        "footer footer footer";
+        justify-items: center;
+    }
 }
 
 .no-border {
@@ -24,11 +38,16 @@ body {
     color: $grayishBlue;
 }
 
+footer {
+    grid-area: footer;
+}
+
 *, *::after, *::before {
     box-sizing: inherit;
 }
 
 .attribution {
+    margin-top: 60px;
     font-size: 11px;
     text-align: center;
 }

@@ -7,7 +7,7 @@ body {
   font-size: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0px;
+  margin: 90px 0px 0px 0px;
   padding: 0px;
   overflow-x: hidden;
   background-color: #fafafa;
@@ -18,6 +18,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    margin: 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr 1fr 1fr 50px;
+        grid-template-rows: 1fr 1fr 1fr 50px;
+        grid-template-areas: "heading heading heading" "supervisor team-builder calculator" "supervisor karma calculator" "footer footer footer";
+    justify-items: center;
+  }
 }
 
 .no-border {
@@ -28,12 +47,17 @@ body {
   color: #a3a5ae;
 }
 
+footer {
+  grid-area: footer;
+}
+
 *, *::after, *::before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
 .attribution {
+  margin-top: 60px;
   font-size: 11px;
   text-align: center;
 }
@@ -43,17 +67,33 @@ body {
 }
 
 body header {
-  margin: 90px 40px 50px 40px;
+  grid-area: heading;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1100px) {
+  body header {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  body header {
+    width: 500px;
+  }
 }
 
 body header h1 {
   font-weight: 300;
   font-size: 1.5rem;
+  text-align: center;
   margin: 0px;
 }
 
 body header h2 {
   font-size: 1.5rem;
+  text-align: center;
   margin: 0px;
 }
 
@@ -69,22 +109,27 @@ body > div {
   border-radius: 5px;
   border-top: 5px solid white;
   height: 220px;
+  width: 310px;
+  position: relative;
 }
 
-body > div > div {
-  border-radius: 5px;
-  border-top: 5px solid white;
-  height: 220px;
-}
-
-body > div > div:first-child {
-  margin-bottom: 50px;
-}
-
-body > div h3 {
+body > div > h3 {
   margin-top: 30px;
   margin-left: 20px;
-  color: #4c4e61;
+  color: #8c8e9b;
+}
+
+body > div > span {
+  margin-left: 20px;
+  color: #a3a5ae;
+  display: block;
+  font-size: .8rem;
+}
+
+body > div > img {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
 }
 
 .shadow {
@@ -106,5 +151,35 @@ body > div h3 {
 
 .border-blue {
   border-color: #549ef2;
+}
+
+#supervisor {
+  grid-area: supervisor;
+}
+
+@media screen and (min-width: 1441px) {
+  #supervisor {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+#team-builder {
+  grid-area: team-builder;
+}
+
+#karma {
+  grid-area: karma;
+}
+
+#calculator {
+  grid-area: calculator;
+}
+
+@media screen and (min-width: 1441px) {
+  #calculator {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
 }
 /*# sourceMappingURL=style.css.map */
